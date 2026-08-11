@@ -4,17 +4,17 @@ public:
 
         int sum = nums[0];
 
+        for (int i = 1; i < nums.size(); i++) {
 
-        for(int i=1;i<nums.size();i++){
-
-            if(nums[i]==nums[i-1]+1){
-                sum+=nums[i];
-            }
-            else break;
+            if (nums[i] == nums[i - 1] + 1) {
+                sum += nums[i];
+            } else
+                break;
         }
-        unordered_set<int>st(nums.begin(),nums.end());
 
-        while(st.find(sum)!=st.end()){
+        unordered_set<int> st(nums.begin(), nums.end());
+
+        while (st.find(sum) != st.end()) {
             sum++;
         }
         return sum;
