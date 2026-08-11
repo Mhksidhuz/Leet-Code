@@ -12,9 +12,13 @@ public:
                 break;
         }
 
-        unordered_set<int> st(nums.begin(), nums.end());
+        unordered_map<int,int>mpp;
 
-        while (st.find(sum) != st.end()) {
+        for(auto it : nums){
+            mpp[it]++;
+        }
+
+        while (mpp.find(sum) != mpp.end()) {
             sum++;
         }
         return sum;
