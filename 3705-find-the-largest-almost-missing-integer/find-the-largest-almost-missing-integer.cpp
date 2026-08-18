@@ -20,18 +20,17 @@ public:
             }
             return maxi;
         }
-        if(mpp[nums[0]]==1 && nums[0]>nums[n-1]){
-            return nums[0];
+
+        int ans = -1;
+
+        if (mpp[nums[0]] == 1) {
+            ans = max(ans, nums[0]);
         }
-        else if(mpp[nums[n-1]]==1 && nums[0]<nums[n-1]){
-            return nums[n-1];
+
+        if (mpp[nums[n - 1]] == 1) {
+            ans = max(ans, nums[n - 1]);
         }
-        else if(mpp[nums[0]]==1 && mpp[nums[n-1]]!=1){
-            return nums[0];
-        }
-        else if(mpp[nums[n-1]]==1 && mpp[nums[0]]!=1){
-            return nums[n-1];
-        }
-        else return -1;
+
+        return ans;
     }
 };
