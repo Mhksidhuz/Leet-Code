@@ -1,27 +1,5 @@
 class Solution {
 public:
-    bool sudoku(vector<vector<char>>& board){
-
-        for(int i=0;i<9;i++){
-            for(int j=0;j<9;j++){
-                if(board[i][j]=='.'){
-                    for(int ch = '1';ch<='9';ch++){
-                        if(possible(i,j,ch,board)){
-                            board[i][j]=ch;
-                            if(sudoku(board)==true){
-                                return true;
-                            }
-                            else{
-                                board[i][j]='.';
-                            }
-                        }
-                    }
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 
     bool possible(int row,int col,char ch,vector<vector<char>> &board){
         for(int i=0;i<9;i++){
