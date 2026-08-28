@@ -16,10 +16,7 @@ public:
                 i++;
                 j++;
             }
-            else if(g[i]>s[j]){
-                j++;
-            }
-            else i++;
+            else j++;
         }
         return ans;
     }
