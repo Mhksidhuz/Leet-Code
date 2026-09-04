@@ -4,9 +4,11 @@ public:
         
         if(nums.size()==1) return 0;
 
+        int maxi = 0;
+
         for(int i=0;i<nums.size();i++){
 
-            int maxi = *max_element(nums.begin(),nums.begin()+i);
+            maxi = max(maxi,nums[i]);
             int mini = *min_element(nums.begin()+i,nums.end());
 
             if(maxi-mini<=k){
