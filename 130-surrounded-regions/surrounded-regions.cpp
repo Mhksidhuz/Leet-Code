@@ -12,7 +12,6 @@ public:
             for(int j=0;j<m;j++){
                 if((i==0 || j==0 || i==n-1 || j==m-1) && board[i][j]=='O'){
                     q.push({i,j});
-                    ans[i][j]=='O';
                 }
             }
         }
